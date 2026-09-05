@@ -1,0 +1,3 @@
+﻿Build path: D:/Games/GuessCharacter
+Build number: 4
+PluginYG version: 2.0092

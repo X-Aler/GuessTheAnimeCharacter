@@ -1,0 +1,804 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name_ru": "Лелуш Ламперуж",
+      "name_en": "Lelouch Lamperouge",
+      "card_asset_name": "001_Lelouch_Lamperouge",
+      "quote_ru": "Стрелять может лишь тот, кто сам готов быть застрелен.",
+      "quote_en": "The only ones who should kill are those who are prepared to be killed."
+    },
+    {
+      "id": 2,
+      "name_ru": "Леви Аккерман",
+      "name_en": "Levi Ackerman",
+      "card_asset_name": "002_Levi_Ackerman",
+      "quote_ru": "Выбирай сам: верить в себя или довериться товарищам.",
+      "quote_en": "Give up on your dreams and die."
+    },
+    {
+      "id": 3,
+      "name_ru": "Монки Д. Луффи",
+      "name_en": "Monkey D. Luffy",
+      "card_asset_name": "003_Monkey_D__Luffy",
+      "quote_ru": "Я стану Королём Пиратов!",
+      "quote_en": "I'm gonna be King of the Pirates!"
+    },
+    {
+      "id": 4,
+      "name_ru": "Лайт Ягами",
+      "name_en": "Light Yagami",
+      "card_asset_name": "004_Light_Yagami",
+      "quote_ru": "Я стану богом нового мира!",
+      "quote_en": "I am the god of the new world!"
+    },
+    {
+      "id": 5,
+      "name_ru": "Ророноа Зоро",
+      "name_en": "Roronoa Zoro",
+      "card_asset_name": "005_Roronoa_Zoro",
+      "quote_ru": "Ничего... вообще ничего не произошло.",
+      "quote_en": "Nothing happened."
+    },
+    {
+      "id": 6,
+      "name_ru": "Сатору Годжо",
+      "name_en": "Satoru Gojo",
+      "card_asset_name": "006_Satoru_Gojo",
+      "quote_ru": "Не волнуйся, я ведь сильнейший.",
+      "quote_en": "Don't worry, I'm the strongest."
+    },
+    {
+      "id": 7,
+      "name_ru": "Эль",
+      "name_en": "L",
+      "card_asset_name": "007_L",
+      "quote_ru": "Правосудие восторжествует, чего бы это ни стоило.",
+      "quote_en": "Justice will prevail, no matter what."
+    },
+    {
+      "id": 8,
+      "name_ru": "Окабэ Ринтаро",
+      "name_en": "Rintarou Okabe",
+      "card_asset_name": "008_Rintarou_Okabe",
+      "quote_ru": "Эль Псай Конгру.",
+      "quote_en": "El Psy Kongroo."
+    },
+    {
+      "id": 9,
+      "name_ru": "Эдвард Элрик",
+      "name_en": "Edward Elric",
+      "card_asset_name": "009_Edward_Elric",
+      "quote_ru": "Чтобы что-то получить, нужно отдать взамен нечто равноценное.",
+      "quote_en": "A lesson without pain is meaningless."
+    },
+    {
+      "id": 10,
+      "name_ru": "Курису Макисэ",
+      "name_en": "Kurisu Makise",
+      "card_asset_name": "010_Kurisu_Makise",
+      "quote_ru": "Время летит одинаково быстро для всех, но его восприятие относительно.",
+      "quote_en": "Time is passing so fast."
+    },
+    {
+      "id": 11,
+      "name_ru": "Киллуа Золдик",
+      "name_en": "Killua Zoldyck",
+      "card_asset_name": "011_Killua_Zoldyck",
+      "quote_ru": "Мы с Гоном — друзья. А друзья не предают.",
+      "quote_en": "Gon, you are my light."
+    },
+    {
+      "id": 12,
+      "name_ru": "Наруто Удзумаки",
+      "name_en": "Naruto Uzumaki",
+      "card_asset_name": "012_Naruto_Uzumaki",
+      "quote_ru": "Я никогда не сдаюсь и не отказываюсь от своих слов — таков мой путь ниндзя!",
+      "quote_en": "I never go back on my word. That's my ninja way!"
+    },
+    {
+      "id": 13,
+      "name_ru": "Гатс",
+      "name_en": "Guts",
+      "card_asset_name": "013_Guts",
+      "quote_ru": "Сражайся. Даже если выхода нет, продолжай бороться.",
+      "quote_en": "Keep struggling, until the very end."
+    },
+    {
+      "id": 14,
+      "name_ru": "Саката Гинтоки",
+      "name_en": "Gintoki Sakata",
+      "card_asset_name": "014_Gintoki_Sakata",
+      "quote_ru": "Если есть время мечтать о красивой смерти, лучше проживи красиво до конца.",
+      "quote_en": "Why not live beautifully until the end?"
+    },
+    {
+      "id": 15,
+      "name_ru": "Эрен Йегер",
+      "name_en": "Eren Yeager",
+      "card_asset_name": "015_Eren_Yeager",
+      "quote_ru": "Если ты не сражаешься, ты не победишь. Сражайся!",
+      "quote_en": "Tatakae. Tatakae."
+    },
+    {
+      "id": 16,
+      "name_ru": "Кэн Канэки",
+      "name_en": "Ken Kaneki",
+      "card_asset_name": "016_Ken_Kaneki",
+      "quote_ru": "Не я виноват... виноват этот мир.",
+      "quote_en": "What is wrong... is this world."
+    },
+    {
+      "id": 17,
+      "name_ru": "Итачи Учиха",
+      "name_en": "Itachi Uchiha",
+      "card_asset_name": "017_Itachi_Uchiha",
+      "quote_ru": "Реальность не изменится от того, что ты её отрицаешь.",
+      "quote_en": "People live their lives bound by what they accept as correct."
+    },
+    {
+      "id": 18,
+      "name_ru": "Какаши Хатакэ",
+      "name_en": "Kakashi Hatake",
+      "card_asset_name": "018_Kakashi_Hatake",
+      "quote_ru": "Те, кто бросают друзей — хуже мусора.",
+      "quote_en": "Those who abandon their friends are worse than scum."
+    },
+    {
+      "id": 19,
+      "name_ru": "Сайтама",
+      "name_en": "Saitama",
+      "card_asset_name": "019_Saitama",
+      "quote_ru": "Я просто парень, который геройствует ради хобби.",
+      "quote_en": "I'm just a guy who's a hero for fun."
+    },
+    {
+      "id": 20,
+      "name_ru": "Осаму Дадзай",
+      "name_en": "Osamu Dazai",
+      "card_asset_name": "020_Osamu_Dazai",
+      "quote_ru": "Человек боится смерти, но в то же время его к ней тянет.",
+      "quote_en": "Have a pure and cheerful suicide."
+    },
+    {
+      "id": 21,
+      "name_ru": "Спайк Шпигель",
+      "name_en": "Spike Spiegel",
+      "card_asset_name": "021_Spike_Spiegel",
+      "quote_ru": "Увидимся, космический ковбой...",
+      "quote_en": "See you, Space Cowboy..."
+    },
+    {
+      "id": 22,
+      "name_ru": "Рем",
+      "name_en": "Rem",
+      "card_asset_name": "022_Rem",
+      "quote_ru": "Давай начнем отсюда. С нуля!",
+      "quote_en": "Let's start from here. From zero!"
+    },
+    {
+      "id": 23,
+      "name_ru": "Киётака Аянокоджи",
+      "name_en": "Kiyotaka Ayanokouji",
+      "card_asset_name": "023_Kiyotaka_Ayanokouji",
+      "quote_ru": "Все люди для меня — лишь инструменты.",
+      "quote_en": "All people are nothing but tools."
+    },
+    {
+      "id": 24,
+      "name_ru": "Хисока Мороу",
+      "name_en": "Hisoka Morow",
+      "card_asset_name": "024_Hisoka_Morow",
+      "quote_ru": "Незрелые плоды так приятно срывать, когда они созреют.",
+      "quote_en": "Bungee Gum has the properties of rubber and gum."
+    },
+    {
+      "id": 25,
+      "name_ru": "Микаса Аккерман",
+      "name_en": "Mikasa Ackerman",
+      "card_asset_name": "025_Mikasa_Ackerman",
+      "quote_ru": "Этот мир жесток... но в то же время прекрасен.",
+      "quote_en": "This world is cruel, but also beautiful."
+    },
+    {
+      "id": 26,
+      "name_ru": "Джотаро Куджо",
+      "name_en": "Jotaro Kujo",
+      "card_asset_name": "026_Jotaro_Kujo",
+      "quote_ru": "Яре яре дазе...",
+      "quote_en": "Yare yare daze..."
+    },
+    {
+      "id": 27,
+      "name_ru": "Рой Мустанг",
+      "name_en": "Roy Mustang",
+      "card_asset_name": "027_Roy_Mustang",
+      "quote_ru": "Дождь пошел...",
+      "quote_en": "It's a terrible day for rain."
+    },
+    {
+      "id": 28,
+      "name_ru": "Субару Нацуки",
+      "name_en": "Subaru Natsuki",
+      "card_asset_name": "028_Subaru_Natsuki",
+      "quote_ru": "Я спасу тебя. Сколько бы раз мне ни пришлось умереть!",
+      "quote_en": "I will save you, no matter what!"
+    },
+    {
+      "id": 29,
+      "name_ru": "Сон Гоку",
+      "name_en": "Son Goku",
+      "card_asset_name": "029_Son_Goku",
+      "quote_ru": "Камехамеха!",
+      "quote_en": "Kamehameha!"
+    },
+    {
+      "id": 30,
+      "name_ru": "Гон Фрикс",
+      "name_en": "Gon Freecss",
+      "card_asset_name": "030_Gon_Freecss",
+      "quote_ru": "Мне всё равно, если это конец. Я использую всё!",
+      "quote_en": "I'll use everything."
+    },
+    {
+      "id": 31,
+      "name_ru": "Мегумин",
+      "name_en": "Megumin",
+      "card_asset_name": "031_Megumin",
+      "quote_ru": "Взрыв!",
+      "quote_en": "Explosion!"
+    },
+    {
+      "id": 32,
+      "name_ru": "Хитаги Сендзёгахара",
+      "name_en": "Hitagi Senjougahara",
+      "card_asset_name": "032_Hitagi_Senjougahara",
+      "quote_ru": "Я люблю тебя больше, чем звезды на ночном небе.",
+      "quote_en": "I love you with all my heart."
+    },
+    {
+      "id": 33,
+      "name_ru": "Хатиман Хикигая",
+      "name_en": "Hachiman Hikigaya",
+      "card_asset_name": "033_Hachiman_Hikigaya",
+      "quote_ru": "Я хочу нечто настоящее.",
+      "quote_en": "I want something genuine."
+    },
+    {
+      "id": 34,
+      "name_ru": "Марин Китагава",
+      "name_en": "Marin Kitagawa",
+      "card_asset_name": "034_Marin_Kitagawa",
+      "quote_ru": "Нельзя смеяться над тем, что искренне любит человек!",
+      "quote_en": "You shouldn't judge someone for what they like!"
+    },
+    {
+      "id": 35,
+      "name_ru": "Макима",
+      "name_en": "Makima",
+      "card_asset_name": "035_Makima",
+      "quote_ru": "Мне нужны только послушные псы, которые говорят 'да'.",
+      "quote_en": "Just the kind of dog I like."
+    },
+    {
+      "id": 36,
+      "name_ru": "Кагуя Синомия",
+      "name_en": "Kaguya Shinomiya",
+      "card_asset_name": "036_Kaguya_Shinomiya",
+      "quote_ru": "Как мило...",
+      "quote_en": "How cute..."
+    },
+    {
+      "id": 37,
+      "name_ru": "Аня Форджер",
+      "name_en": "Anya Forger",
+      "card_asset_name": "037_Anya_Forger",
+      "quote_ru": "Ваку-ваку!",
+      "quote_en": "Waku waku!"
+    },
+    {
+      "id": 38,
+      "name_ru": "Юкино Юкиносита",
+      "name_en": "Yukino Yukinoshita",
+      "card_asset_name": "038_Yukino_Yukinoshita",
+      "quote_ru": "Люди, которые не стараются, не имеют права завидовать.",
+      "quote_en": "People who don't work hard shouldn't envy."
+    },
+    {
+      "id": 39,
+      "name_ru": "Дэнджи",
+      "name_en": "Denji",
+      "card_asset_name": "039_Denji",
+      "quote_ru": "Для меня моя мечта важнее всего на свете!",
+      "quote_en": "Everybody is after my heart!"
+    },
+    {
+      "id": 40,
+      "name_ru": "Курапика",
+      "name_en": "Kurapika",
+      "card_asset_name": "040_Kurapika",
+      "quote_ru": "Я боюсь лишь того, что моя ярость со временем угаснет.",
+      "quote_en": "I fear only that my rage will fade over time."
+    },
+    {
+      "id": 41,
+      "name_ru": "Джозеф Джостар",
+      "name_en": "Joseph Joestar",
+      "card_asset_name": "041_Joseph_Joestar",
+      "quote_ru": "Твоя следующая фраза...",
+      "quote_en": "Your next line will be..."
+    },
+    {
+      "id": 42,
+      "name_ru": "Маомао",
+      "name_en": "Maomao",
+      "card_asset_name": "042_Maomao",
+      "quote_ru": "Это яд!",
+      "quote_en": "This is poison."
+    },
+    {
+      "id": 43,
+      "name_ru": "Фрирен",
+      "name_en": "Frieren",
+      "card_asset_name": "043_Frieren",
+      "quote_ru": "Я просто хочу узнать людей получше.",
+      "quote_en": "I want to know more about people."
+    },
+    {
+      "id": 44,
+      "name_ru": "Вэш Ураган",
+      "name_en": "Vash the Stampede",
+      "card_asset_name": "044_Vash_the_Stampede",
+      "quote_ru": "Мир и любовь!",
+      "quote_en": "Love and peace!"
+    },
+    {
+      "id": 45,
+      "name_ru": "Ичиго Куросаки",
+      "name_en": "Ichigo Kurosaki",
+      "card_asset_name": "045_Ichigo_Kurosaki",
+      "quote_ru": "Я сражаюсь не ради победы. Я сражаюсь, чтобы защитить тех, кто дорог.",
+      "quote_en": "I'm fighting because I have to protect them."
+    },
+    {
+      "id": 46,
+      "name_ru": "Май Сакурадзима",
+      "name_en": "Mai Sakurajima",
+      "card_asset_name": "046_Mai_Sakurajima",
+      "quote_ru": "Обещай, что не забудешь меня.",
+      "quote_en": "Don't ever forget me."
+    },
+    {
+      "id": 47,
+      "name_ru": "Кадзума Сато",
+      "name_en": "Kazuma Satou",
+      "card_asset_name": "047_Kazuma_Satou",
+      "quote_ru": "Да, я Кадзума.",
+      "quote_en": "Yes, I'm Kazuma."
+    },
+    {
+      "id": 48,
+      "name_ru": "Эрвин Смит",
+      "name_en": "Erwin Smith",
+      "card_asset_name": "048_Erwin_Smith",
+      "quote_ru": "Посвятите свои сердца!",
+      "quote_en": "My soldiers, rage! My soldiers, fight!"
+    },
+    {
+      "id": 49,
+      "name_ru": "Санджи",
+      "name_en": "Sanji",
+      "card_asset_name": "049_Sanji",
+      "quote_ru": "Я никогда не ударю женщину!",
+      "quote_en": "I will never hit a woman, even if I die!"
+    },
+    {
+      "id": 50,
+      "name_ru": "Саске Учиха",
+      "name_en": "Sasuke Uchiha",
+      "card_asset_name": "050_Sasuke_Uchiha",
+      "quote_ru": "Я иду во тьму.",
+      "quote_en": "My dream lies in the past."
+    },
+    {
+      "id": 51,
+      "name_ru": "Сугуру Гето",
+      "name_en": "Suguru Geto",
+      "card_asset_name": "051_Suguru_Geto",
+      "quote_ru": "Ты сильнейший, потому что ты Годжо Сатору?",
+      "quote_en": "Are you the strongest because you're Gojo?"
+    },
+    {
+      "id": 52,
+      "name_ru": "Пауэр",
+      "name_en": "Power",
+      "card_asset_name": "052_Power",
+      "quote_ru": "Преклонитесь передо мной!",
+      "quote_en": "Bow down before me!"
+    },
+    {
+      "id": 53,
+      "name_ru": "Тодзи Фушигуро",
+      "name_en": "Toji Fushiguro",
+      "card_asset_name": "053_Toji_Fushiguro",
+      "quote_ru": "Я просто делаю свою работу.",
+      "quote_en": "Just doing my job."
+    },
+    {
+      "id": 54,
+      "name_ru": "Хотаро Орэки",
+      "name_en": "Houtarou Oreki",
+      "card_asset_name": "054_Houtarou_Oreki",
+      "quote_ru": "Если можно не делать — не делай.",
+      "quote_en": "If I don't have to do it, I won't."
+    },
+    {
+      "id": 55,
+      "name_ru": "Шото Тодороки",
+      "name_en": "Shoto Todoroki",
+      "card_asset_name": "055_Shoto_Todoroki",
+      "quote_ru": "Это моя сила!",
+      "quote_en": "It's my power!"
+    },
+    {
+      "id": 56,
+      "name_ru": "Кацуки Бакуго",
+      "name_en": "Katsuki Bakugo",
+      "card_asset_name": "056_Katsuki_Bakugo",
+      "quote_ru": "Сдохни! Я буду номером один!",
+      "quote_en": "I'm gonna be number one!"
+    },
+    {
+      "id": 57,
+      "name_ru": "Идзуку Мидория",
+      "name_en": "Izuku Midoriya",
+      "card_asset_name": "057_Izuku_Midoriya",
+      "quote_ru": "Я стану героем, который спасает всех с улыбкой!",
+      "quote_en": "I want to be a hero who saves everyone!"
+    },
+    {
+      "id": 58,
+      "name_ru": "Мегуми Фушигуро",
+      "name_en": "Megumi Fushiguro",
+      "card_asset_name": "058_Megumi_Fushiguro",
+      "quote_ru": "Я спасаю людей по собственному выбору.",
+      "quote_en": "I save who I want to save."
+    },
+    {
+      "id": 59,
+      "name_ru": "Аска Лэнгли Сорью",
+      "name_en": "Asuka Langley Soryu",
+      "card_asset_name": "059_Asuka_Langley_Soryu",
+      "quote_ru": "Ты дурак?",
+      "quote_en": "Anta baka?!"
+    },
+    {
+      "id": 60,
+      "name_ru": "Рэй Аянами",
+      "name_en": "Rei Ayanami",
+      "card_asset_name": "060_Rei_Ayanami",
+      "quote_ru": "Мне всегда найдут замену.",
+      "quote_en": "I can be replaced."
+    },
+    {
+      "id": 61,
+      "name_ru": "Синдзи Икари",
+      "name_en": "Shinji Ikari",
+      "card_asset_name": "061_Shinji_Ikari",
+      "quote_ru": "Я не должен убегать!",
+      "quote_en": "I mustn't run away!"
+    },
+    {
+      "id": 62,
+      "name_ru": "Рюко Матой",
+      "name_en": "Ryuko Matoi",
+      "card_asset_name": "062_Ryuko_Matoi",
+      "quote_ru": "Не теряй свой путь!",
+      "quote_en": "Don't lose your way!"
+    },
+    {
+      "id": 63,
+      "name_ru": "Холо",
+      "name_en": "Holo",
+      "card_asset_name": "063_Holo",
+      "quote_ru": "Одиночество — болезнь, от которой нет лекарств.",
+      "quote_en": "Loneliness is an incurable sickness."
+    },
+    {
+      "id": 64,
+      "name_ru": "Миюки Сироганэ",
+      "name_en": "Miyuki Shirogane",
+      "card_asset_name": "064_Miyuki_Shirogane",
+      "quote_ru": "Признаться — значит проиграть!",
+      "quote_en": "Love is war!"
+    },
+    {
+      "id": 65,
+      "name_ru": "Акаме",
+      "name_en": "Akame",
+      "card_asset_name": "065_Akame",
+      "quote_ru": "Устранить.",
+      "quote_en": "Eliminate."
+    },
+    {
+      "id": 66,
+      "name_ru": "Торфинн",
+      "name_en": "Thorfinn",
+      "card_asset_name": "066_Thorfinn",
+      "quote_ru": "У меня нет врагов.",
+      "quote_en": "I have no enemies."
+    },
+    {
+      "id": 67,
+      "name_ru": "Аскеладд",
+      "name_en": "Askeladd",
+      "card_asset_name": "067_Askeladd",
+      "quote_ru": "Все люди рабы чего-то.",
+      "quote_en": "Everyone is a slave to something."
+    },
+    {
+      "id": 68,
+      "name_ru": "Трафальгар Д. Ватер Ло",
+      "name_en": "Trafalgar D. Water Law",
+      "card_asset_name": "068_Trafalgar_D__Water_Law",
+      "quote_ru": "Слабые не выбирают, как им умереть.",
+      "quote_en": "The weak don't choose how they die."
+    },
+    {
+      "id": 69,
+      "name_ru": "Портгас Д. Эйс",
+      "name_en": "Portgas D. Ace",
+      "card_asset_name": "069_Portgas_D__Ace",
+      "quote_ru": "Спасибо, что любили меня!",
+      "quote_en": "Thank you for loving me!"
+    },
+    {
+      "id": 70,
+      "name_ru": "Гильгамеш",
+      "name_en": "Gilgamesh",
+      "card_asset_name": "070_Gilgamesh",
+      "quote_ru": "Знай свое место, дворняга!",
+      "quote_en": "Know your place, mongrel!"
+    },
+    {
+      "id": 71,
+      "name_ru": "Сэйбер (Артурия)",
+      "name_en": "Artoria Pendragon",
+      "card_asset_name": "071_Artoria_Pendragon",
+      "quote_ru": "Ты мой мастер?",
+      "quote_en": "Are you my Master?"
+    },
+    {
+      "id": 72,
+      "name_ru": "Тосака Рин",
+      "name_en": "Rin Tohsaka",
+      "card_asset_name": "072_Rin_Tohsaka",
+      "quote_ru": "Выкладывайся на полную во всем.",
+      "quote_en": "Always give it your best."
+    },
+    {
+      "id": 73,
+      "name_ru": "Эмилия",
+      "name_en": "Emilia",
+      "card_asset_name": "073_Emilia",
+      "quote_ru": "Спасибо, что спас меня.",
+      "quote_en": "Thank you for saving me."
+    },
+    {
+      "id": 74,
+      "name_ru": "Юно Гасай",
+      "name_en": "Yuno Gasai",
+      "card_asset_name": "074_Yuno_Gasai",
+      "quote_ru": "Я защищу тебя, Юки!",
+      "quote_en": "I will protect Yukki!"
+    },
+    {
+      "id": 75,
+      "name_ru": "Рёмен Сукуна",
+      "name_en": "Ryomen Sukuna",
+      "card_asset_name": "075_Ryomen_Sukuna",
+      "quote_ru": "Знай свое место.",
+      "quote_en": "Stand proud. You are strong."
+    },
+    {
+      "id": 76,
+      "name_ru": "Кёко Хори",
+      "name_en": "Kyouko Hori",
+      "card_asset_name": "076_Kyouko_Hori",
+      "quote_ru": "Не показывай эту сторону никому, кроме меня.",
+      "quote_en": "Don't let anyone else see this side."
+    },
+    {
+      "id": 77,
+      "name_ru": "Идзуми Миямура",
+      "name_en": "Izumi Miyamura",
+      "card_asset_name": "077_Izumi_Miyamura",
+      "quote_ru": "Рядом с тобой я стал собой.",
+      "quote_en": "With you, I can be myself."
+    },
+    {
+      "id": 78,
+      "name_ru": "Шинобу Ошино",
+      "name_en": "Shinobu Oshino",
+      "card_asset_name": "078_Shinobu_Oshino",
+      "quote_ru": "Ка-ка! Глупый смертный.",
+      "quote_en": "Ka-ka! Foolish mortal."
+    },
+    {
+      "id": 79,
+      "name_ru": "Коёми Арараги",
+      "name_en": "Koyomi Araragi",
+      "card_asset_name": "079_Koyomi_Araragi",
+      "quote_ru": "Люди спасают себя сами.",
+      "quote_en": "People save themselves on their own."
+    },
+    {
+      "id": 80,
+      "name_ru": "Сигэо Кагэяма (Моб)",
+      "name_en": "Shigeo Kageyama",
+      "card_asset_name": "080_Shigeo_Kageyama",
+      "quote_ru": "Силы не делают меня особенным.",
+      "quote_en": "Powers don't make me special."
+    },
+    {
+      "id": 81,
+      "name_ru": "Аратака Рэйгэн",
+      "name_en": "Arataka Reigen",
+      "card_asset_name": "081_Arataka_Reigen",
+      "quote_ru": "Если тяжело — просто беги!",
+      "quote_en": "It's completely fine to run away!"
+    },
+    {
+      "id": 82,
+      "name_ru": "Недзуко Камадо",
+      "name_en": "Nezuko Kamado",
+      "card_asset_name": "082_Nezuko_Kamado",
+      "quote_ru": "Мм-ммф!",
+      "quote_en": "Mmh-mmph!"
+    },
+    {
+      "id": 83,
+      "name_ru": "Гию Томиока",
+      "name_en": "Giyu Tomioka",
+      "card_asset_name": "083_Giyu_Tomioka",
+      "quote_ru": "Не поддавайся отчаянию.",
+      "quote_en": "Don't despair."
+    },
+    {
+      "id": 84,
+      "name_ru": "Кёдзюро Рэнгоку",
+      "name_en": "Kyojuro Rengoku",
+      "card_asset_name": "084_Kyojuro_Rengoku",
+      "quote_ru": "Зажги свое сердце!",
+      "quote_en": "Set your heart ablaze!"
+    },
+    {
+      "id": 85,
+      "name_ru": "Вайолет Эвергарден",
+      "name_en": "Violet Evergarden",
+      "card_asset_name": "085_Violet_Evergarden",
+      "quote_ru": "Я хочу узнать, что значит 'люблю'.",
+      "quote_en": "I want to know what love means."
+    },
+    {
+      "id": 86,
+      "name_ru": "Сёё Хината",
+      "name_en": "Shouyou Hinata",
+      "card_asset_name": "086_Shouyou_Hinata",
+      "quote_ru": "Я перепрыгну эту стену!",
+      "quote_en": "I will see the view from the top!"
+    },
+    {
+      "id": 87,
+      "name_ru": "Тобио Кагеяма",
+      "name_en": "Tobio Kageyama",
+      "card_asset_name": "087_Tobio_Kageyama",
+      "quote_ru": "На площадке остаются победители.",
+      "quote_en": "Only winners stay on the court."
+    },
+    {
+      "id": 88,
+      "name_ru": "Тору Ойкава",
+      "name_en": "Toru Oikawa",
+      "card_asset_name": "088_Toru_Oikawa",
+      "quote_ru": "Талант нужно развивать!",
+      "quote_en": "Talent is something you polish!"
+    },
+    {
+      "id": 89,
+      "name_ru": "Римуру Темпест",
+      "name_en": "Rimuru Tempest",
+      "card_asset_name": "089_Rimuru_Tempest",
+      "quote_ru": "Я не плохая слизь!",
+      "quote_en": "I'm not a bad slime!"
+    },
+    {
+      "id": 90,
+      "name_ru": "Аинз Оал Гоун",
+      "name_en": "Ainz Ooal Gown",
+      "card_asset_name": "090_Ainz_Ooal_Gown",
+      "quote_ru": "Слава Назарику!",
+      "quote_en": "Sasuga, Ainz-sama!"
+    },
+    {
+      "id": 91,
+      "name_ru": "Боджи",
+      "name_en": "Bojji",
+      "card_asset_name": "091_Bojji",
+      "quote_ru": "(Уверенный жест и улыбка)",
+      "quote_en": "(Determined smile)"
+    },
+    {
+      "id": 92,
+      "name_ru": "Сенку Исигами",
+      "name_en": "Senku Ishigami",
+      "card_asset_name": "092_Senku_Ishigami",
+      "quote_ru": "Волнующе на 10 миллиардов %!",
+      "quote_en": "Exhilarating, ten billion %!"
+    },
+    {
+      "id": 93,
+      "name_ru": "Тони Тони Чоппер",
+      "name_en": "Tony Tony Chopper",
+      "card_asset_name": "093_Tony_Tony_Chopper",
+      "quote_ru": "Твоя похвала меня не радует!",
+      "quote_en": "Your praise doesn't make me happy!"
+    },
+    {
+      "id": 94,
+      "name_ru": "Нико Робин",
+      "name_en": "Nico Robin",
+      "card_asset_name": "094_Nico_Robin",
+      "quote_ru": "Я хочу жить!",
+      "quote_en": "I want to live!"
+    },
+    {
+      "id": 95,
+      "name_ru": "Аки Хаякава",
+      "name_en": "Aki Hayakawa",
+      "card_asset_name": "095_Aki_Hayakawa",
+      "quote_ru": "Кон.",
+      "quote_en": "Kon."
+    },
+    {
+      "id": 96,
+      "name_ru": "Гриффит",
+      "name_en": "Griffith",
+      "card_asset_name": "096_Griffith",
+      "quote_ru": "Друг — тот, кто равен мне.",
+      "quote_en": "A friend is someone who stands as an equal."
+    },
+    {
+      "id": 97,
+      "name_ru": "Веджета",
+      "name_en": "Vegeta",
+      "card_asset_name": "097_Vegeta",
+      "quote_ru": "Его сила больше 9000!",
+      "quote_en": "It's over 9000!"
+    },
+    {
+      "id": 98,
+      "name_ru": "Мадара Учиха",
+      "name_en": "Madara Uchiha",
+      "card_asset_name": "098_Madara_Uchiha",
+      "quote_ru": "Проснись для реальности.",
+      "quote_en": "Wake up to reality."
+    },
+    {
+      "id": 99,
+      "name_ru": "Кирито",
+      "name_en": "Kirito",
+      "card_asset_name": "099_Kirito",
+      "quote_ru": "В этом мире важна сила воли.",
+      "quote_en": "Your will determines your strength."
+    },
+    {
+      "id": 100,
+      "name_ru": "Тайга Айсака",
+      "name_en": "Taiga Aisaka",
+      "card_asset_name": "100_Taiga_Aisaka",
+      "quote_ru": "Чего уставился, пес?!",
+      "quote_en": "What are you staring at?!"
+    }
+  ]
+}
