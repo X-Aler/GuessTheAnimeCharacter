@@ -1,0 +1,6 @@
+{
+  "name": "Vendor.CrazyGames",
+  "references": [],
+  "defineConstraints": ["PLATFORM_CRAZYGAMES"],
+  "autoReferenced": true
+}

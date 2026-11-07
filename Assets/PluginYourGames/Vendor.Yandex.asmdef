@@ -1,0 +1,12 @@
+{
+  "name": "Vendor.Yandex",
+  "references": [
+    "Unity.TextMeshPro",
+    "Unity.ugui",
+    "Unity.Newtonsoft.Json"
+  ],
+  "defineConstraints": [
+    "!PLATFORM_CRAZYGAMES"
+  ],
+  "autoReferenced": true
+}

@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using PrimeTween;
-using YG; // Общий API платформ
+using GamePlatform;
 
 public class QuizGameController : MonoBehaviour
 {
@@ -30,14 +30,13 @@ public class QuizGameController : MonoBehaviour
 
     private void OnEnable()
     {
-        // Подписываемся на смену языка плагина
-        YG2.onSwitchLang += OnLanguageChanged;
+        PlatformServices.LanguageChanged += OnLanguageChanged;
     }
 
     private void OnDisable()
     {
         // Обязательно отписываемся во избежание утечек памяти
-        YG2.onSwitchLang -= OnLanguageChanged;
+        PlatformServices.LanguageChanged -= OnLanguageChanged;
     }
 
     private void Start()
@@ -65,8 +64,8 @@ public class QuizGameController : MonoBehaviour
 
     public void StartQuiz()
     {
-        if (!YG2.isSDKEnabled || YG2.isPauseGame || YG2.nowAdsShow) return;
-        YG2.GameplayStart();
+        if (!PlatformServices.CanPlay) return;
+        PlatformServices.Service.GameplayStart();
         _isQuizStarted = true;
         _score = 0;
         _currentQuestionIndex = 0;
@@ -124,13 +123,13 @@ public class QuizGameController : MonoBehaviour
         {
             CharacterData data = options[i];
             Sprite charSprite = Resources.Load<Sprite>($"Characters/{data.card_asset_name}");
-            answerCards[i].Setup(data, charSprite, YG2.lang, OnCardSelected);
+            answerCards[i].Setup(data, charSprite, PlatformServices.Language, OnCardSelected);
         }
     }
 
     private void OnCardSelected(CharacterData selectedCharacter)
     {
-        if (!YG2.isSDKEnabled || YG2.isPauseGame || YG2.nowAdsShow) return;
+        if (!PlatformServices.CanPlay) return;
         if (selectedCharacter.id == _currentTarget.id)
         {
             _score++;
@@ -150,19 +149,19 @@ public class QuizGameController : MonoBehaviour
 
     private void EndQuiz()
     {
-        YG2.GameplayStop();
+        PlatformServices.Service.GameplayStop();
         quizScreen.SetActive(false);
         resultScreen.SetActive(true);
         UpdateResultScoreText();
-        YG2.InterstitialAdvShow();
+        PlatformServices.Service.ShowInterstitial(null);
     }
 
-    // Реакция на смену языка в плагине (вызывается автоматически при YG2.SwitchLanguage)
+    // Refresh visible quiz content when the platform language becomes available.
     private void OnLanguageChanged(string newLang)
     {
         UpdateQuoteDisplay();
         UpdateActionButtonText();
-        UpdateResultScoreText();
+        if (_isQuizStarted) UpdateResultScoreText();
 
         // Обновляем текст на карточках ответов (тултипы)
         for (int i = 0; i < answerCards.Length; i++)
@@ -176,7 +175,7 @@ public class QuizGameController : MonoBehaviour
     {
         if (_currentTarget != null && quoteText != null)
         {
-            quoteText.text = $"«{_currentTarget.GetQuote(YG2.lang)}»";
+            quoteText.text = $"«{_currentTarget.GetQuote(PlatformServices.Language)}»";
         }
     }
 
@@ -186,11 +185,11 @@ public class QuizGameController : MonoBehaviour
 
         if (!_isQuizStarted)
         {
-            actionButtonText.text = YG2.lang == "ru" ? "Старт" : "Start";
+            actionButtonText.text = PlatformServices.Language == "ru" ? "Старт" : "Start";
         }
         else
         {
-            actionButtonText.text = YG2.lang == "ru" ? "Начать заново" : "Play Again";
+            actionButtonText.text = PlatformServices.Language == "ru" ? "Начать заново" : "Play Again";
         }
     }
 
@@ -198,7 +197,7 @@ public class QuizGameController : MonoBehaviour
     {
         if (resultScoreText != null)
         {
-            if (YG2.lang == "ru")
+            if (PlatformServices.Language == "ru")
                 resultScoreText.text = $"Твой результат: {_score} из {questionsPerRound}!";
             else
                 resultScoreText.text = $"Your score: {_score} of {questionsPerRound}!";
