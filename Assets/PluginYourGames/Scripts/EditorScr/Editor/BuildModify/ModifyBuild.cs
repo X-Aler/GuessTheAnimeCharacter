@@ -30,6 +30,7 @@ namespace YG.EditorScr.BuildModify
         private static double waitStartTime = 0d;
         private const double FALLBACK_DELAY_SECONDS = 1.0d;
         private static int pendingBuildNumber = -1;
+        private static string pendingPlatform = string.Empty;
         private static List<string> pendingErrors = new List<string>();
         private static string pendingOpenBuildPath = string.Empty;
         private enum CodeType { HeadNative, BodyNative, JS, Head, Body, Init0, Init1, Init2, Init, Start };
@@ -100,6 +101,7 @@ namespace YG.EditorScr.BuildModify
         private static void QueuePostBuildLog(int buildNumber, List<string> errors)
         {
             pendingBuildNumber = buildNumber;
+            pendingPlatform = PlatformSettings.currentPlatformBaseName;
             pendingErrors = errors != null ? new List<string>(errors) : new List<string>();
             waitUnityBuildSummaryLog = true;
             unityBuildSummaryLogSeen = false;
@@ -177,7 +179,7 @@ namespace YG.EditorScr.BuildModify
 #else
             string logBuildCompleteText = "Build complete!";
 #endif
-            Debug.Log($"<color=#00FF00>{InfoYG.NAME_PLUGIN} - {logBuildCompleteText}  Platform - {PlatformSettings.currentPlatformBaseName}.  Build number: {pendingBuildNumber}</color>");
+            Debug.Log($"<color=#00FF00>{InfoYG.NAME_PLUGIN} - {logBuildCompleteText}  Platform - {pendingPlatform}.  Build number: {pendingBuildNumber}</color>");
 
             if (InfoYG.instance.Basic.platform == null)
             {

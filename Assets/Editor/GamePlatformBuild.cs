@@ -5,6 +5,8 @@ using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 using UnityEditor.Build.Profile;
+using UnityEditor.Callbacks;
+using UnityEditor.Compilation;
 using UnityEngine;
 using YG;
 using YG.Insides;
@@ -14,6 +16,8 @@ using YG.Insides;
 public class GamePlatformBuild : IPreprocessBuildWithReport, IPostprocessBuildWithReport
 {
     private const string PendingKey = "AnimeQuiz.PlatformBuild";
+    private const string NextKey = "AnimeQuiz.NextPlatformBuild";
+    private const string AwaitReloadKey = "AnimeQuiz.PlatformBuildAwaitReload";
     private static double readyAfter;
 #if CrazyGamesPlatform_yg && !YandexGamesPlatform_yg
     private const string CompiledPlatform = "CrazyGames";
@@ -27,6 +31,9 @@ public class GamePlatformBuild : IPreprocessBuildWithReport, IPostprocessBuildWi
         readyAfter = EditorApplication.timeSinceStartup + 3;
         EditorApplication.update += ContinueBuild;
     }
+
+    [DidReloadScripts]
+    private static void ScriptsReloaded() => SessionState.SetBool(AwaitReloadKey, false);
 
     [MenuItem("Game/Platform/Select Yandex Games")]
     public static void SelectYandex() => Select("YandexGames");
@@ -81,15 +88,28 @@ public class GamePlatformBuild : IPreprocessBuildWithReport, IPostprocessBuildWi
             defines.Add(platform + "Platform_yg");
             PlayerSettings.SetScriptingDefineSymbols(target, string.Join(";", defines));
         }
+        // Build Profile changes do not always schedule an Editor compilation themselves.
+        // A reload, rather than elapsed time, is the barrier before the next build.
+        SessionState.SetBool(AwaitReloadKey, true);
+        CompilationPipeline.RequestScriptCompilation();
         readyAfter = EditorApplication.timeSinceStartup + 3;
         Debug.Log("Selected " + platform + ". Wait for script compilation before building.");
     }
 
     private static void ContinueBuild()
     {
+        if (EditorApplication.isCompiling || EditorApplication.isUpdating || BuildPipeline.isBuildingPlayer) return;
+        // Start the next selection on a fresh Editor update, outside BuildPlayer's call stack.
+        var next = SessionState.GetString(NextKey, "");
+        if (next != "")
+        {
+            SessionState.EraseString(NextKey);
+            Queue(next);
+            return;
+        }
         var pending = SessionState.GetString(PendingKey, "");
-        if (pending == "" || EditorApplication.isCompiling || EditorApplication.isUpdating ||
-            BuildPipeline.isBuildingPlayer || EditorApplication.timeSinceStartup < readyAfter) return;
+        if (pending == "" || SessionState.GetBool(AwaitReloadKey, false) ||
+            EditorApplication.timeSinceStartup < readyAfter) return;
         SessionState.EraseString(PendingKey);
         try
         {
@@ -105,7 +125,7 @@ public class GamePlatformBuild : IPreprocessBuildWithReport, IPostprocessBuildWi
                 JsonUtility.ToJson(new Result { platform = platforms[0], result = report.summary.result.ToString(),
                     errors = (int)report.summary.totalErrors, utc = DateTime.UtcNow.ToString("O") }, true));
             if (report.summary.result != BuildResult.Succeeded) throw new BuildFailedException("Build failed: " + platforms[0]);
-            if (platforms.Length > 1) Queue(string.Join(",", platforms.Skip(1)));
+            if (platforms.Length > 1) SessionState.SetString(NextKey, string.Join(",", platforms.Skip(1)));
         }
         catch (Exception error) { Debug.LogException(error); }
     }

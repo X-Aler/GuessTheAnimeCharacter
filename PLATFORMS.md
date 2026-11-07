@@ -14,6 +14,9 @@ small Unity JavaScript bridge. No additional Unity SDK package is required.
   (or the active Build Profile's scene override).
 - Outputs: `Builds/YandexGames` and `Builds/CrazyGames`. The combined command builds
   Yandex first, then CrazyGames. A failed build stops the queue.
+  Each platform switch explicitly requests script compilation; the queue resumes
+  only after scripts reload. The second selection happens after the first build
+  has returned to the Editor update loop.
 - The standard Build window also works after selecting a platform. Build Profile
   overrides must agree with that selection. The build validator rejects mismatched
   templates, symbols, initialization settings and CrazyGames compression settings.
