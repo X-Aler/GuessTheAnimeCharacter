@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using PrimeTween;
-using YG; // Подключаем SDK Яндекс Игр
+using YG; // Общий API платформ
 
 public class QuizGameController : MonoBehaviour
 {
@@ -47,8 +47,7 @@ public class QuizGameController : MonoBehaviour
         // Выставляем стартовый текст кнопки ("Старт" / "Start") под язык пользователя
         UpdateActionButtonText();
 
-        // Сигнализируем платформе Яндекс Игры, что игра загрузилась и готова к показу
-        YG2.GameReadyAPI();
+        // AppBootstrap sends readiness after SDK initialization.
     }
 
     private void LoadDatabase()
@@ -66,6 +65,8 @@ public class QuizGameController : MonoBehaviour
 
     public void StartQuiz()
     {
+        if (!YG2.isSDKEnabled || YG2.isPauseGame || YG2.nowAdsShow) return;
+        YG2.GameplayStart();
         _isQuizStarted = true;
         _score = 0;
         _currentQuestionIndex = 0;
@@ -129,6 +130,7 @@ public class QuizGameController : MonoBehaviour
 
     private void OnCardSelected(CharacterData selectedCharacter)
     {
+        if (!YG2.isSDKEnabled || YG2.isPauseGame || YG2.nowAdsShow) return;
         if (selectedCharacter.id == _currentTarget.id)
         {
             _score++;
@@ -148,9 +150,11 @@ public class QuizGameController : MonoBehaviour
 
     private void EndQuiz()
     {
+        YG2.GameplayStop();
         quizScreen.SetActive(false);
         resultScreen.SetActive(true);
         UpdateResultScoreText();
+        YG2.InterstitialAdvShow();
     }
 
     // Реакция на смену языка в плагине (вызывается автоматически при YG2.SwitchLanguage)
@@ -158,6 +162,7 @@ public class QuizGameController : MonoBehaviour
     {
         UpdateQuoteDisplay();
         UpdateActionButtonText();
+        UpdateResultScoreText();
 
         // Обновляем текст на карточках ответов (тултипы)
         for (int i = 0; i < answerCards.Length; i++)

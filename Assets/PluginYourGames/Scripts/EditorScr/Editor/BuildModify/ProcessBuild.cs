@@ -1,4 +1,4 @@
-﻿namespace YG.EditorScr.BuildModify
+namespace YG.EditorScr.BuildModify
 {
     using UnityEditor.Build.Reporting;
     using UnityEditor.Build;
@@ -10,6 +10,7 @@
         public int callbackOrder => -1000;
         public void OnPreprocessBuild(BuildReport report)
         {
+#if !CrazyGamesPlatform_yg
             int.TryParse(BuildLog.ReadProperty("Build number"), out int buildNumInt);
             buildNumInt += 1;
             YG2.infoYG.Basic.buildNumber = buildNumInt;
@@ -24,16 +25,19 @@
 #endif
             if (YG2.infoYG.Basic.platform != null && YG2.infoYG.Basic.autoApplySettings)
                 InfoYG.Inst().Basic.platform.ApplyProjectSettings();
+#endif
         }
 
         public void OnPostprocessBuild(BuildReport report)
         {
+#if !CrazyGamesPlatform_yg
             ModifyBuild.ModifyIndex();
 
             if (YG2.infoYG.Basic.archivingBuild)
                 ArchivingBuild.Archiving(BuildPath);
 
             BuildLog.WritingLog();
+#endif
         }
 
 #if PLATFORM_WEBGL

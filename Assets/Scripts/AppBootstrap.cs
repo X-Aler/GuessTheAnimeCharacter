@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using YG; // Пространство имен PluginYG v2
+using YG; // Общий API платформ Plugin Your Games
 
 public class AppBootstrap : MonoBehaviour
 {
@@ -30,8 +30,8 @@ public class AppBootstrap : MonoBehaviour
 
     private IEnumerator InitSequenceRoutine()
     {
-        // 2. Ждем, пока плагин инициализирует SDK Яндекса и получит данные окружения (язык, устройство)
-        // YG2.isSDKEnabled становится true, когда JS-библиотека ysdk загружена и ответила
+        // 2. Ждём инициализации выбранного SDK и данных окружения.
+        // syncInitSDK не допускает готовности до ответа платформы.
         while (!YG2.isSDKEnabled)
         {
             yield return null;
@@ -47,17 +47,18 @@ public class AppBootstrap : MonoBehaviour
         if (loadingScreen != null) loadingScreen.SetActive(false);
         if (mainScreen != null) mainScreen.SetActive(true);
 
-        // 4. Оповещаем Яндекс Игры о полной готовности игры к взаимодействию
+        // 4. Оповещаем выбранную платформу о готовности интерфейса.
         // Вызываем СТРОГО после того, как экран загрузки скрыт и меню уже перед глазами игрока
         YG2.GameReadyAPI();
 
         // 5. Подрубаем баннерную рекламу (RTB / Sticky-баннер)
-        if (showBannerOnStart)
+        if (showBannerOnStart && YG2.platform == "YandexGames")
         {
             EnableBanner();
         }
 
-        AudioManager.Instance.PlayLoopingSound(AudioManager.Instance.OST, 1);
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayLoopingSound(AudioManager.Instance.OST, 1);
     }
 
     private void EnableBanner()
