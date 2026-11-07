@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 ﻿using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -81,3 +82,4 @@ namespace YG.EditorScr.BuildModify
         }
     }
 }
+#endif

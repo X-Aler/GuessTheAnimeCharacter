@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 ﻿using System;
 using System.IO;
 using System.IO.Compression;
@@ -31,3 +32,4 @@ namespace YG.EditorScr.BuildModify
         }
     }
 }
+#endif

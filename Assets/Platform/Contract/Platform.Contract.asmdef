@@ -1,0 +1,5 @@
+{
+  "name": "Platform.Contract",
+  "rootNamespace": "GamePlatform",
+  "autoReferenced": true
+}

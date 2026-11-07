@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 // YGEditorStyles.cs
 // Безопасная работа со стилями во время перекомпиляции/без активного GUI skin
 
@@ -260,3 +261,5 @@ namespace YG.EditorScr
         }
     }
 }
+
+#endif

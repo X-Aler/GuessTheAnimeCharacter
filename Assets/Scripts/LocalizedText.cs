@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using YG;
+using GamePlatform;
 
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class LocalizedText : MonoBehaviour
@@ -21,24 +21,23 @@ public class LocalizedText : MonoBehaviour
 
     private void OnEnable()
     {
-        // Подписываемся на смену языка в SDK
-        YG2.onSwitchLang += UpdateText;
+        PlatformServices.LanguageChanged += UpdateText;
 
         // Обновляем текст при каждом включении объекта на случай, 
         // если язык изменился, пока объект был скрыт
-        UpdateText(YG2.lang);
+        UpdateText(PlatformServices.Language);
     }
 
     private void OnDisable()
     {
         // Обязательно отписываемся от события при деактивации объекта
-        YG2.onSwitchLang -= UpdateText;
+        PlatformServices.LanguageChanged -= UpdateText;
     }
 
     private void Start()
     {
         // Первичное обновление на старте
-        UpdateText(YG2.lang);
+        UpdateText(PlatformServices.Language);
     }
 
     /// <summary>

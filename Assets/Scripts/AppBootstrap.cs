@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
-using YG; // Общий API платформ Plugin Your Games
+using GamePlatform;
+using TMPro;
 
 public class AppBootstrap : MonoBehaviour
 {
@@ -30,17 +31,20 @@ public class AppBootstrap : MonoBehaviour
 
     private IEnumerator InitSequenceRoutine()
     {
-        // 2. Ждём инициализации выбранного SDK и данных окружения.
-        // syncInitSDK не допускает готовности до ответа платформы.
-        while (!YG2.isSDKEnabled)
+        PlatformServices.Initialize();
+        while (!PlatformServices.IsReady && PlatformServices.Error == null)
         {
             yield return null;
         }
 
-        YG2.SwitchLanguage(YG2.lang);
+        if (PlatformServices.Error != null)
+        {
+            var label = loadingScreen != null ? loadingScreen.GetComponentInChildren<TMP_Text>(true) : null;
+            if (label != null) label.text = "Could not load the game. Please reload the page.\n" + PlatformServices.Error;
+            yield break;
+        }
 
-        // Даем 1 кадр на завершение работы встроенных подписчиков LanguageYG,
-        // чтобы тексты на сцене успели применить полученный язык (YG2.lang)
+        // Let localized UI apply the SDK language before showing the menu.
         yield return null;
 
         // 3. Прячем загрузочный экран и активируем основной интерфейс
@@ -49,21 +53,10 @@ public class AppBootstrap : MonoBehaviour
 
         // 4. Оповещаем выбранную платформу о готовности интерфейса.
         // Вызываем СТРОГО после того, как экран загрузки скрыт и меню уже перед глазами игрока
-        YG2.GameReadyAPI();
-
-        // 5. Подрубаем баннерную рекламу (RTB / Sticky-баннер)
-        if (showBannerOnStart && YG2.platform == "YandexGames")
-        {
-            EnableBanner();
-        }
+        PlatformServices.GameReady(showBannerOnStart);
 
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayLoopingSound(AudioManager.Instance.OST, 1);
     }
 
-    private void EnableBanner()
-    {
-        YG2.SetBannerPosition(YG2.BannerPosition.Bottom);
-        YG2.ShowBanner();
-    }
 }

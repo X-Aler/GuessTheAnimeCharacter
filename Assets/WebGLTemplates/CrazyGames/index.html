@@ -9,7 +9,6 @@
     #unity-canvas { width:100%; height:100%; display:block; }
     #loading { position:absolute; inset:0; display:grid; place-items:center; color:white; font:20px sans-serif; pointer-events:none; }
   </style>
-  <script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
   <script>
     window.cgShowError = function (message) {
       window.cgError = message;
@@ -17,17 +16,6 @@
       loading.style.display = 'grid';
       loading.textContent = message;
     };
-    window.cgSdkReady = (async function () {
-      if (!window.CrazyGames) throw new Error('CrazyGames SDK script did not load');
-      await Promise.race([
-        window.CrazyGames.SDK.init(),
-        new Promise(function (_, reject) { setTimeout(function () { reject(new Error('CrazyGames initialization timeout')); }, 30000); })
-      ]);
-      window.CrazyGames.SDK.game.loadingStart();
-      return window.CrazyGames.SDK;
-    })();
-    // Keep rejection handled even if Unity has not loaded yet.
-    window.cgSdkReady.catch(function (error) { console.error(error); });
   </script>
 </head>
 <body>

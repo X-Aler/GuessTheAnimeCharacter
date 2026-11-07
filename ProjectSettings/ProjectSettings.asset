@@ -573,7 +573,7 @@ PlayerSettings:
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: PROJECT:YandexGames
+  webGLTemplate: PROJECT:CrazyGames
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 0
@@ -594,7 +594,8 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   webProgressiveAssetLoading: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    WebGL: PLUGIN_YG_2;TMP_YG2;RU_YG2;InterstitialAdv_yg;EnvirData_yg;Localization_yg;AutoTranslateLangs_yg;BannerAdv_yg;NJSON_YG2;YandexGamesPlatform_yg;PLATFORM_CRAZYGAMES
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
