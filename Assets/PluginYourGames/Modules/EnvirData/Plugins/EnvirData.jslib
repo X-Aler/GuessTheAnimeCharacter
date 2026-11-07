@@ -1,20 +1,5 @@
-
-mergeInto(LibraryManager.library,
-{
-	InitEnvironmentData_js: function ()
-	{
-		var returnStr = environmentData;
-		var bufferSize = lengthBytesUTF8(returnStr) + 1;
-		var buffer = _malloc(bufferSize);
-		stringToUTF8(returnStr, buffer, bufferSize);
-		return buffer;
-	},	
-	
-	RequestingEnvironmentData_js: function () {
-        RequestingEnvironmentData();
-    },
-	
-	GeneralEnvirData_js: function () {
+mergeInto(LibraryManager.library, {
+GeneralEnvirData_js: function () {
 		var language = navigator.language || navigator.userLanguage || "en";
 		var browserLang = navigator.language || "en";
 

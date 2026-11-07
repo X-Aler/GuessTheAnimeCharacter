@@ -1,13 +1,11 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using PrimeTween;
-using YG;
 public class ButtonVFX : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public void OnPointerDown(PointerEventData eventData)
     {
         AudioManager.Instance.PlaySFX(AudioManager.Instance.buttonSound);
-        YG2.InterstitialAdvShow();
     }
 
     public virtual void OnPointerEnter(PointerEventData eventData)
